@@ -3,7 +3,10 @@ import { Inter } from 'next/font/google'
 import Navbar from '@/components/Navbar'
 import './globals.css'
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({ 
+  subsets: ['latin'],
+  variable: '--font-inter',
+})
 
 export const metadata: Metadata = {
   title: 'TFD',
@@ -18,9 +21,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={`${inter.variable} font-sans`}>
         <Navbar />
-        <div className='bg-neutral-950 h-full font-[inter] text-white accent-rose-600'>
+        <div className='bg-neutral-950 h-full font-inter text-white accent-rose-600'>
           {children}
         </div>
       </body>

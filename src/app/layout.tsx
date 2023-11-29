@@ -20,8 +20,8 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <body className={`${inter.variable} font-sans`}>
+    <html lang="en" className={`${inter.variable} font-sans`}>
+      <body>
         <Navbar />
         <div className='bg-neutral-950 h-full font-inter text-white accent-rose-600'>
           {children}

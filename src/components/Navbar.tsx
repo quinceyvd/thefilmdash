@@ -10,7 +10,7 @@ export default function Navbar() {
     const activePageLink = pageLink + ' bg-rose-700';
     return (
         <nav className="sticky top-0">
-            <div className="flex flex-row items-center bg-neutral-900 py-3 px-2 font-[inter] text-white">
+            <div className="flex flex-row items-center bg-neutral-900 py-3 px-2 text-white">
                 <Link href="/">
                     <Image src="/logo-sm.png" alt="logo" width={60} height={60} />
                 </Link>

@@ -8,12 +8,13 @@ interface CanvasProps {
     year: string;
     score: number;
     imageUrl: string;
+    className?: string;
 }
 
 // Font
 const inter = Inter({ subsets: ['latin'] })
 
-export default function TitleSlideCanvas({ title, year, score, imageUrl }: CanvasProps) {
+export default function TitleSlideCanvas({ title, year, score, imageUrl, className }: CanvasProps) {
     const canvasRef = useRef<HTMLCanvasElement | null>(null);
     useEffect(() => {
         const canvas = canvasRef.current;
@@ -119,5 +120,5 @@ export default function TitleSlideCanvas({ title, year, score, imageUrl }: Canva
         }
     }, [title, year, score, imageUrl]);
 
-    return <canvas ref={canvasRef} className='w-[405px] h-[506px]' />;
+    return <canvas ref={canvasRef} className={'w-full md:w-[405px] xl:w-[405px] xl:rounded-xl ' + className } />;
 }

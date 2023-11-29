@@ -7,7 +7,7 @@ const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'TFD',
-  description: 'Generate social media sliders for your Film/TV review.',
+  description: 'A tool for turning your film/TV review into a social media presentation.',
 }
 
 
@@ -20,7 +20,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <Navbar />
-        <div className='bg-neutral-950 h-screen font-[inter]'>
+        <div className='bg-neutral-950 h-full font-[inter] text-white accent-rose-600'>
           {children}
         </div>
       </body>

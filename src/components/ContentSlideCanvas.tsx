@@ -7,11 +7,12 @@ interface CanvasProps {
     contentSlideText: string;
     title: string;
     score: number;
+    className?: string;
 }
 // Font
 const inter = Inter({ subsets: ['latin'] })
 
-export default function ContentSlideCanvas({ contentSlideBg, contentSlideText, title, score }: CanvasProps) {
+export default function ContentSlideCanvas({ contentSlideBg, contentSlideText, title, score, className }: CanvasProps) {
     const canvasRef = useRef<HTMLCanvasElement | null>(null);
     useEffect(() => {
         const canvas = canvasRef.current;
@@ -113,5 +114,5 @@ export default function ContentSlideCanvas({ contentSlideBg, contentSlideText, t
         }
     }, [contentSlideBg, contentSlideText, title, score]);
 
-    return <canvas ref={canvasRef} className='w-[405px] h-[506px]' />;
+    return <canvas ref={canvasRef} className={'w-full md:w-[405px] lg:w-1/3 xl:w-[405px] xl:rounded-xl ' + className } />;
 }

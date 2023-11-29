@@ -1,9 +1,11 @@
 interface HeadingProps {
     size: number;
     text: string;
+    className?: string;
 }
 
-export default function Heading({ size, text }: HeadingProps) {
+// Styled heading component
+export default function Heading({ size, text, className }: HeadingProps) {
     const getSize = (size: number) => {
         switch (size) {
             case 1:
@@ -22,9 +24,6 @@ export default function Heading({ size, text }: HeadingProps) {
                 return 'text-base';
         }
     }
-    return (
-        <>
-            <h1 className={getSize(size) + ' font-[inter] font-bold text-white'}>{text}</h1>
-        </>
-    )
+    return <p className={getSize(size) + ' font-[inter] font-bold text-white ' + className}>{text}</p>
+
 }

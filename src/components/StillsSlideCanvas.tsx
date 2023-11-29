@@ -5,9 +5,10 @@ interface CanvasProps {
     still1: string;
     still2: string;
     still3: string;
+    className?: string;
 }
 
-export default function StillsSlideCanvas({ still1, still2, still3 }: CanvasProps) {
+export default function StillsSlideCanvas({ still1, still2, still3, className }: CanvasProps) {
     const canvasRef = useRef<HTMLCanvasElement | null>(null);
     useEffect(() => {
         const canvas = canvasRef.current;
@@ -73,5 +74,5 @@ export default function StillsSlideCanvas({ still1, still2, still3 }: CanvasProp
         }
     }, [still1, still2, still3]);
 
-    return <canvas ref={canvasRef} className='w-[405px] h-[506px]' />;
+    return <canvas ref={canvasRef} className={'w-full md:w-[405px] lg:w-1/3 xl:w-[405px] xl:rounded-xl ' + className } />;
 }

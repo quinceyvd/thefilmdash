@@ -24,6 +24,6 @@ export default function Heading({ size, text, className }: HeadingProps) {
                 return 'text-base';
         }
     }
-    return <p className={getSize(size) + ' font-[inter] font-bold text-white ' + className}>{text}</p>
+    return <p className={getSize(size) + ' font-bold text-white ' + className}>{text}</p>
 
 }

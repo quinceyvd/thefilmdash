@@ -31,10 +31,10 @@ export default function Home() {
             activeSlide === 'title' ?
               <TitleSlideCreator />
               : activeSlide === 'stills' ?
-                <Heading text="Not yet available." size={3} className='text-neutral-700 font-normal pt-20 text-center' />
+                <Heading text="Not yet available." size={4} className='text-gray-600 font-normal pt-20 text-center' />
                 : activeSlide === 'content' ?
-                  <Heading text="Not yet available." size={3} className='text-neutral-700 font-normal pt-20 text-center' />
-                  : <Heading text="Select a slide type..." size={3} className='text-neutral-700 font-normal pt-20 text-center' />
+                  <Heading text="Not yet available." size={4} className='text-gray-600 font-normal pt-20 text-center' />
+                  : <Heading text="Select a slide type..." size={4} className='text-gray-600 font-normal pt-20 text-center' />
           }
         </div>
       </div>

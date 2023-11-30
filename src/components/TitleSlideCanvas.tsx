@@ -9,13 +9,14 @@ interface CanvasProps {
     score: number;
     imageUrl: string;
     className?: string;
+    fontSize?: number;
+    canvasRef?: any;
 }
 
 // Font
 const inter = Inter({ subsets: ['latin'] })
 
-export default function TitleSlideCanvas({ title, year, score, imageUrl, className }: CanvasProps) {
-    const canvasRef = useRef<HTMLCanvasElement | null>(null);
+export default function TitleSlideCanvas({ title, year, score, imageUrl, fontSize, className, canvasRef }: CanvasProps) {
     useEffect(() => {
         const canvas = canvasRef.current;
         if (canvas) {
@@ -88,7 +89,7 @@ export default function TitleSlideCanvas({ title, year, score, imageUrl, classNa
                         // Add title and year to canvas
                         ctx.fillStyle = 'white';
                         ctx.textAlign = 'center';
-                        ctx.font = 'bold 90px ' + inter.style.fontFamily;
+                        ctx.font = `bold ${fontSize}px ` + inter.style.fontFamily;
                         wrapText(ctx, title, canvas.width / 2, canvas.height * 0.75, canvas.width - 20, 90);
                         ctx.font = '40px ' + inter.style.fontFamily;
                         ctx.fillText(year, canvas.width / 2, canvas.height * 0.75 + 50);
@@ -118,7 +119,7 @@ export default function TitleSlideCanvas({ title, year, score, imageUrl, classNa
                 };
             }
         }
-    }, [title, year, score, imageUrl]);
+    }, [title, year, score, imageUrl, fontSize]);
 
     return <canvas ref={canvasRef} className={'w-full md:w-[405px] xl:w-[405px] xl:rounded-xl ' + className } />;
 }

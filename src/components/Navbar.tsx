@@ -16,7 +16,7 @@ export default function Navbar() {
                 </Link>
                 <div className="inline-block h-14 w-px bg-neutral-700 ml-4"></div>
                 <div className='flex ml-6 w-[200px] justify-between'>
-                    <Link href="/" className={pathname !== '/' ? pageLink : activePageLink}>Home</Link>
+                    <Link href="/" className={pathname !== '/' ? pageLink : activePageLink}>Create</Link>
                     <Link href="/examples" className={pathname !== '/examples' ? pageLink : activePageLink}>Examples</Link>
                 </div>
             </div>

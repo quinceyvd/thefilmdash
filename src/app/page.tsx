@@ -18,7 +18,7 @@ export default function Home() {
   return (
     <main className='flex flex-col h-full p-6 pt-14'>
       <div className='flex flex-col xl:justify-center lg:mx-auto lg:w-1/3'>
-        <Heading text="Home" size={1} />
+        <Heading text="Create" size={1} />
         <p>Create a new slidepost presentation.</p>
         <HorizontalRow />
         <div className='flex flex-row space-between justify-between my-4'>

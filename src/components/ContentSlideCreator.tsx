@@ -81,7 +81,7 @@ export default function ContentSlideCreator() {
                                 score={formData.rating}
                                 className='rounded-xl w-full sm:w-[405px]'
                             />
-                            <button onClick={() => downloadCanvas(canvasRef.current, 'stills')} className={buttonStyle}>Download</button>
+                            <button onClick={() => downloadCanvas(canvasRef.current, 'content')} className={buttonStyle}>Download</button>
                         </div>
                     </> : null
             }

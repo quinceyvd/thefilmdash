@@ -26,12 +26,12 @@ export default function Home() {
           <button className={activeSlide === 'stills' ? 'mt-4 py-4 px-4 sm:w-[150px] border-b-4 border-rose-600 hover:bg-neutral-800 ease-in-out duration-200' : 'mt-4 py-4 px-4 sm:w-[150px] border-b-4 border-neutral-900 hover:border-neutral-400 hover:bg-neutral-800 ease-in-out duration-200'} onClick={() => updateSlideState('stills')}>Stills</button>
           <button className={activeSlide === 'content' ? 'mt-4 py-4 px-4 sm:w-[150px] border-b-4 border-rose-600 hover:bg-neutral-800 ease-in-out duration-200' : 'mt-4 py-4 px-4 sm:w-[150px] border-b-4 border-neutral-900 hover:border-neutral-400 hover:bg-neutral-800 ease-in-out duration-200'} onClick={() => updateSlideState('content')}>Content</button>
         </div>
-        <div className={activeSlide !== 'title' ? 'h-[70vh]' : ''}>
+        <div className={activeSlide !== 'title' && activeSlide !== 'stills' ? 'h-[70vh]' :  ''}>
           {
             activeSlide === 'title' ?
               <TitleSlideCreator />
               : activeSlide === 'stills' ?
-                <Heading text="Not yet available." size={4} className='text-gray-600 font-normal pt-20 text-center' />
+                <StillsSlideCreator />
                 : activeSlide === 'content' ?
                   <Heading text="Not yet available." size={4} className='text-gray-600 font-normal pt-20 text-center' />
                   : <Heading text="Select a slide type..." size={4} className='text-gray-600 font-normal pt-20 text-center' />

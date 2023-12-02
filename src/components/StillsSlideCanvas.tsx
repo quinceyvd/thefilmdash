@@ -6,10 +6,10 @@ interface CanvasProps {
     still2: string;
     still3: string;
     className?: string;
+    canvasRef?: any;
 }
 
-export default function StillsSlideCanvas({ still1, still2, still3, className }: CanvasProps) {
-    const canvasRef = useRef<HTMLCanvasElement | null>(null);
+export default function StillsSlideCanvas({ still1, still2, still3, className, canvasRef }: CanvasProps) {
     useEffect(() => {
         const canvas = canvasRef.current;
         if (canvas) {

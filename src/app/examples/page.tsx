@@ -7,19 +7,13 @@ import type { Metadata } from 'next'
 import HorizontalRow from '@/components/elements/HorizontalRow'
 import { useRef } from 'react'
 
-// Metadata for page
-// export const metadata: Metadata = {
-//   title: 'TFD | Examples',
-// }
-
 export default function Examples() {
   // Frequently reused style presets
   const scrollableDiv = 'flex flex-row overflow-auto xl:p-6';
-  const canvasTitle = 'mt-5';
   const canvasItem = 'xl:mr-5';
 
-  // Template data
-  const templates = require('@/components/functions/templates.json');
+  // Template slides data
+  const templates = require('@/components/globals/templates.json');
 
   return (
     <main className='flex flex-col h-full'>

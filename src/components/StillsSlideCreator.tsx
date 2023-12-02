@@ -15,8 +15,8 @@ export default function StillsSlideCreator() {
         submitted: false,
     })
     const canvasRef = useRef<HTMLCanvasElement | null>(null);
-    const globalStyles = require('@/components/globals/styles.json');
-
+    const inputStyle = 'my-6'
+    const buttonStyle = 'mt-4 py-4 px-4 sm:w-[150px] rounded-lg bg-neutral-700 hover:bg-neutral-600 ease-in-out duration-200'
     const generateCanvas = (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
         const { image1, image2, image3 } = event.currentTarget.elements as any;
@@ -65,14 +65,14 @@ export default function StillsSlideCreator() {
             <form onSubmit={generateCanvas} className='py-4 flex flex-col'>
                 <label className='mt-4'><Heading text="Image 1" size={6} /></label>
                 <p>This still will be placed highest in the image.</p>
-                <input name="image1" type="file" accept="image/*" onChange={handleImage1Upload} className='my-6' required />
+                <input name="image1" type="file" accept="image/*" onChange={handleImage1Upload} className={inputStyle} required />
                 <label className='mt-4'><Heading text="Image 2" size={6} /></label>
                 <p>This still will be placed in the middle of the image.</p>
-                <input name="image2" type="file" accept="image/*" onChange={handleImage2Upload} className='my-6' required />
+                <input name="image2" type="file" accept="image/*" onChange={handleImage2Upload} className={inputStyle} required />
                 <label className='mt-4'><Heading text="Image 3" size={6} /></label>
                 <p>This still will be placed at the bottom of the image.</p>
-                <input name="image3" type="file" accept="image/*" onChange={handleImage3Upload} className='my-6' required />
-                <button type="submit" className={globalStyles.standardButton}>Generate</button>
+                <input name="image3" type="file" accept="image/*" onChange={handleImage3Upload} className={inputStyle} required />
+                <button type="submit" className={buttonStyle}>Generate</button>
             </form>
             { // Display canvas if formData has been submitted
                 formData.submitted ?
@@ -88,7 +88,7 @@ export default function StillsSlideCreator() {
                                 still3={formData.image3}
                                 className='rounded-xl w-full sm:w-[405px]'
                             />
-                            <button onClick={() => downloadCanvas(canvasRef.current, 'stills')} className={globalStyles.standardButton}>Download</button>
+                            <button onClick={() => downloadCanvas(canvasRef.current, 'stills')} className={buttonStyle}>Download</button>
                         </div>
                     </> : null
             }

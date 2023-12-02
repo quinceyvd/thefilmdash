@@ -61,18 +61,21 @@ export default function Examples() {
         </div>
         <div className={scrollableDiv}>
           <StillsSlideCanvas
+            canvasRef={useRef<HTMLCanvasElement | null>(null)}
             still1={templates[1].still1}
             still2={templates[1].still2}
             still3={templates[1].still3}
             className={canvasItem}
           />
           <StillsSlideCanvas
+            canvasRef={useRef<HTMLCanvasElement | null>(null)}
             still1={templates[2].still1}
             still2={templates[2].still2}
             still3={templates[2].still3}
             className={canvasItem}
           />
           <StillsSlideCanvas
+            canvasRef={useRef<HTMLCanvasElement | null>(null)}
             still1={templates[3].still1}
             still2={templates[3].still2}
             still3={templates[3].still3}

@@ -72,7 +72,7 @@ export default function ContentSlideCreator() {
                         <HorizontalRow />
                         <div className='flex flex-col self-center items-center justify-center my-12 sm:w-inherit' id='canvasWrapper'>
                             <Heading text={randomJobDone()} size={2} className='pb-4' />
-                            <p className='pb-10'>{"Here's"} your newly generated stills slide.</p>
+                            <p className='pb-10'>{"Here's"} your newly generated content slide.</p>
                             <ContentSlideCanvas
                                 canvasRef={canvasRef}
                                 contentSlideBg={formData.bgImage}

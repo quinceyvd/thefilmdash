@@ -63,7 +63,7 @@ export default function ContentSlideCreator() {
                 <input name="rating" type="number" step="0.5" min="0.5" placeholder="Add rating..." className={inputStyle} required />
                 <label className='mt-4'><Heading text="Review content" size={6} /></label>
                 <p>Write your review here. (max 706 characters)</p>
-                <textarea maxLength={706} name="textContent" placeholder="Write your review here..." className='p-3 my-4 rounded-lg w-full sm:w-[500px] ease-in-out duration-200 bg-neutral-900 placeholder-neutral-700' required />
+                <textarea maxLength={706} name="textContent" placeholder="Write your review here..." className='p-3 pb-60 my-4 rounded-lg w-full sm:w-[500px] ease-in-out duration-200 bg-neutral-900 placeholder-neutral-700' required />
                 <button type="submit" className={buttonStyle}>Generate</button>
             </form>
             { // Display canvas if formData has been submitted

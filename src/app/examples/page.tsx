@@ -87,6 +87,7 @@ export default function Examples() {
         </div>
         <div className={scrollableDiv}>
           <ContentSlideCanvas
+            canvasRef={useRef<HTMLCanvasElement | null>(null)}
             contentSlideBg={templates[1].contentSlideBg}
             contentSlideText={templates[1].contentSlideText}
             title={templates[1].title}
@@ -94,6 +95,7 @@ export default function Examples() {
             className={canvasItem}
           />
           <ContentSlideCanvas
+            canvasRef={useRef<HTMLCanvasElement | null>(null)}
             contentSlideBg={templates[2].contentSlideBg}
             contentSlideText={templates[2].contentSlideText}
             title={templates[2].title}
@@ -101,6 +103,7 @@ export default function Examples() {
             className={canvasItem}
           />
           <ContentSlideCanvas
+            canvasRef={useRef<HTMLCanvasElement | null>(null)}
             contentSlideBg={templates[3].contentSlideBg}
             contentSlideText={templates[3].contentSlideText}
             title={templates[3].title}

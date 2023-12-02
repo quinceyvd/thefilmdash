@@ -8,12 +8,12 @@ interface CanvasProps {
     title: string;
     score: number;
     className?: string;
+    canvasRef?: any;
 }
 // Font
 const inter = Inter({ subsets: ['latin'] })
 
-export default function ContentSlideCanvas({ contentSlideBg, contentSlideText, title, score, className }: CanvasProps) {
-    const canvasRef = useRef<HTMLCanvasElement | null>(null);
+export default function ContentSlideCanvas({ contentSlideBg, contentSlideText, title, score, className, canvasRef }: CanvasProps) {
     useEffect(() => {
         const canvas = canvasRef.current;
         if (canvas) {
